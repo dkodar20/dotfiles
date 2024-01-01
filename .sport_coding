@@ -1,0 +1,39 @@
+mkcdir(){
+    mkdir "$@"
+    cd "$@"
+}
+
+sport(){
+    touch "$@"
+    subl "$@"
+}
+
+dbrun(){
+    g++ -g -std=c++17 -O2 -pthread -Wall -Wextra -Wshadow -Wno-unused-result -Wconversion -Wformat=2 -Wfloat-equal -Wlogical-op -Wshift-overflow=2 -Wduplicated-cond -Wcast-qual -Wcast-align -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -D_FORTIFY_SOURCE=2 -fsanitize=address -fsanitize=undefined -fno-sanitize-recover=all -fstack-protector-all -fsanitize=float-divide-by-zero -fsanitize=float-cast-overflow -DRUDR_DEBUG "$@"
+    echo "Running with debugging flags...\n"
+    ./a.out
+}
+
+runsample(){
+    g++ -g -std=c++17 "$@"
+    ./a.out
+}
+
+dsample(){
+    g++ -g -std=c++17 -DRUDR_DEBUG "$@"
+    ./a.out
+}
+
+compile(){
+    g++ -g -std=c++17 -DRUDR_DEBUG "$@"
+}
+
+alias increase-stack-memory='ulimit -s 262144'
+
+push(){
+    git add .
+    git add ./*
+    git commit --allow-empty-message -m "$@"
+    git push
+}
+
