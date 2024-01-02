@@ -1,0 +1,12 @@
+Nvim setup steps for CP (on mac)
+- Install coc.nvim and coc-clangd for autocompletion (also install clangd using brew)
+- Install gcc using brew (mac default gcc redirects to clang)
+- brew installed g++ should already have bits/stdc++.h header
+- To edit it for debugging logs, the location for header file is
+  `/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13/aarch64-apple-darwin22`
+- Add the debug.h at `/opt/homebrew/Cellar/gcc/13.2.0/include/c++/13`
+- Auto completion using clangd will still give error on bits/stdc++.h
+- To fix that add the bits/stdc++.h header where clang headers are located
+  `/usr/local/include`
+(I guess a better way would be to make brew's gcc use system headers as well
+and just include the headers in /usr/local/include)
