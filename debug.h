@@ -6,7 +6,7 @@ using namespace std;
 inline void debug_print(bool a) {cerr << a;}
 inline void debug_print(int a) {cerr << a;}
 inline void debug_print(short a) {cerr << a;}
-inline void debug_print(int64_t a) {cerr << a;}
+// inline void debug_print(int64_t a) {cerr << a;}
 inline void debug_print(long long a) {cerr << a;}
 inline void debug_print(float a) {cerr << a;}
 inline void debug_print(double a) {cerr << a;}
