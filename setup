@@ -10,3 +10,11 @@ Nvim setup steps for CP (on mac)
   `/usr/local/include`
 (I guess a better way would be to make brew's gcc use system headers as well
 and just include the headers in /usr/local/include)
+
+Nvim.coc all plugins
+- coc-go, coc-clangd, coc-snippets, coc-json
+
+Terminal settings
+- Font - Lilex Nerd Font Mono Regular 18 (needs to be installed manually)
+- Window Size - 140 X 80
+- Profile - Basic
