@@ -1,0 +1,13 @@
+# .clang-format
+
+# Use tabs for indentation
+UseTab: Always
+
+# Tab width
+TabWidth: 4
+
+# Indentation width
+IndentWidth: 4
+
+# Other formatting options...
+
