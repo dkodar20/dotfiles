@@ -1,3 +1,5 @@
 {
-    "coc.preferences.formatOnSave": true
+    "coc.preferences.formatOnSave": true,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true
 }

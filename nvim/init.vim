@@ -73,7 +73,7 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
 "" Snippets
-Plug 'SirVer/ultisnips'
+" Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 
 "*****************************************************************************
@@ -308,6 +308,16 @@ augroup vimrc-make-cmake
   autocmd!
   autocmd FileType make setlocal noexpandtab
   autocmd BufNewFile,BufRead CMakeLists.txt setlocal filetype=cmake
+augroup END
+
+augroup typescriptindent
+  autocmd FileType typescriptreact setlocal tabstop=2
+  autocmd FileType typescriptreact setlocal shiftwidth=2
+augroup END
+
+augroup pythonindent
+  autocmd FileType python setlocal tabstop=3
+  autocmd FileType python setlocal shiftwidth=3
 augroup END
 
 set autoread
